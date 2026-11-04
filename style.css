@@ -142,3 +142,43 @@
   .paloma { animation: none; }
   .paloma-verde { left: 18%; } .paloma-rosa { left: auto; right: 18%; }
 }
+
+/* ---------- ANIMACIONES ---------- */
+/* Ángel del cartel de "Cartas del taller": sube y baja despacio */
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+@keyframes girar {
+  to { transform: rotate(360deg); }
+}
+/* Etiqueta de precio: se balancea al pasar el ratón por la oferta */
+@keyframes balanceo {
+  0%, 100% { transform: rotate(0); }
+  25%      { transform: rotate(-4deg); }
+  60%      { transform: rotate(3deg); }
+}
+/* Brillo que recorre el texto dorado */
+@keyframes brillo {
+  from { background-position: 0% 50%; }
+  to   { background-position: 200% 50%; }
+}
+/* Punto verde de "abierto ahora": late como una señal */
+@keyframes latido {
+  0%   { box-shadow: 0 0 0 0 rgba(122, 140, 90, .55); }
+  70%  { box-shadow: 0 0 0 10px rgba(122, 140, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(122, 140, 90, 0); }
+}
+/* Ornamento que se dibuja trazo a trazo */
+@keyframes trazo { to { stroke-dashoffset: 0; } }
+/* Ángel con trompeta: vuela flotando e inclinándose */
+@keyframes angel {
+  0%, 100% { transform: translate(0, 0) rotate(-3deg); }
+  30%      { transform: translate(6px, -12px) rotate(2deg); }
+  60%      { transform: translate(-4px, -6px) rotate(-1deg); }
+}
+
+/* Respeta a quien prefiere menos movimiento (ajuste del sistema operativo) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
