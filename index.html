@@ -47,7 +47,7 @@
       </button>
       <ul class="hidden md:flex md:gap-5 lg:gap-8 font-sc tracking-widest text-sm">
         <li><a href="#coleccion" class="hover:text-rosa">Colección</a></li>
-        <li><a href="#estilos" class="hover:text-rosa">Estilos</a></li>
+        <li><a href="#dedicatoria" class="hover:text-rosa">Dedicatoria</a></li>
         <li><a href="#ofertas" class="hover:text-rosa">Ofertas</a></li>
       </ul>
       <a href="#" class="justify-self-center"><img src="img/logo-dvash.webp" alt="Dvash" class="h-10 md:h-12"></a>
@@ -66,7 +66,7 @@
     <nav id="menu-movil" aria-label="Menú móvil" class="md:hidden border-t border-oliva/20 dark:border-crema/20" style="display:none">
       <ul class="flex flex-col px-4 py-2 text-2xl">
         <li><a href="#coleccion" class="block py-3 border-b border-oliva/10 hover:text-rosa dark:border-crema/10">Colección</a></li>
-        <li><a href="#estilos" class="block py-3 border-b border-oliva/10 hover:text-rosa dark:border-crema/10">Estilos</a></li>
+        <li><a href="#dedicatoria" class="block py-3 border-b border-oliva/10 hover:text-rosa dark:border-crema/10">Dedicatoria</a></li>
         <li><a href="#ofertas" class="block py-3 border-b border-oliva/10 hover:text-rosa dark:border-crema/10">Ofertas</a></li>
         <li><a href="#taller" class="block py-3 border-b border-oliva/10 hover:text-rosa dark:border-crema/10">El taller</a></li>
         <li><a href="#visitanos" class="block py-3 border-b border-oliva/10 hover:text-rosa dark:border-crema/10">Visítanos</a></li>
@@ -130,7 +130,7 @@
   </section>
 
   <!-- ===== LA DEDICATORIA (vista previa en vivo con jQuery) ===== -->
-  <section data-aos="fade-up" aria-labelledby="t-dedicatoria" class="salmo relative overflow-hidden px-4 md:px-10 py-32 md:py-40 border-b border-oliva/20 dark:border-crema/20">
+  <section data-aos="fade-up" id="dedicatoria" aria-labelledby="t-dedicatoria" class="salmo relative overflow-hidden px-4 md:px-10 py-32 md:py-40 border-b border-oliva/20 dark:border-crema/20">
     <img src="img/paloma-verde.webp" alt="" aria-hidden="true" class="paloma paloma-verde">
     <img src="img/paloma-rosa.webp"  alt="" aria-hidden="true" class="paloma paloma-rosa">
 
@@ -324,6 +324,54 @@
     </div>
   </section>
 
+  <!-- ===== FRANJA CON EL ESTAMPADO ===== -->
+  <div class="h-28 md:h-40 bg-center bg-cover" style="background-image:url(img/patron.webp)"></div>
+
+  <!-- ===== CARTAS DEL TALLER (newsletter) ===== -->
+  <section data-aos="fade-up" id="contacto" class="relative overflow-hidden px-4 md:px-10 py-20 md:py-24 border-b border-oliva/20 bg-lino/50 text-center dark:border-crema/20 dark:bg-musgo/60">
+    <!-- Ángel con trompeta: anuncia las cartas (solo en pantallas grandes) -->
+    <img src="img/angel.webp" alt="" class="dibujo hidden lg:block absolute left-10 xl:left-20 bottom-6 w-32 xl:w-40 animar-flotar">
+    <h2 class="font-sc tracking-[0.25em] text-2xl md:text-3xl">Cartas del taller</h2>
+    <div class="my-4">
+      <img src="img/ornamento.webp" alt="" class="dibujo w-44 md:w-56 mx-auto">
+    </div>
+    <p class="text-oliva/80 max-w-lg mx-auto dark:text-crema/80">
+      Una vez al mes: nuevos diseños, el proceso desde dentro y, a veces, un versículo
+      que no nos podemos quitar de la cabeza. <em>Y un 10% en tu primer encargo.</em>
+    </p>
+    <form class="mt-10 max-w-xl mx-auto flex flex-col sm:flex-row items-stretch sm:items-end gap-5 sm:gap-6" onsubmit="event.preventDefault(); this.innerHTML='<p class=&quot;py-3 italic mx-auto&quot;>¡Ya estás en la lista!</p>'">
+      <label for="email-carta" class="sr-only">Tu email</label>
+      <input id="email-carta" type="email" required placeholder="Tu email" class="flex-1 bg-transparent border-b border-oliva/60 py-2 text-lg outline-none placeholder:text-oliva/50 focus:border-oliva dark:border-crema/60 dark:placeholder:text-crema/50">
+      <button type="submit" class="bg-oliva text-crema font-sc tracking-[0.2em] text-sm px-7 py-3 hover:bg-rosa transition dark:bg-crema dark:text-oliva dark:hover:bg-rubor">suscribirse</button>
+    </form>
+  </section>
+
   </main>
+
+  <footer class="relative px-4 md:px-10 py-14">
+    <img src="img/rama-linea.webp" alt="" class="dibujo hidden md:block absolute right-6 top-6 w-40 lg:w-52 opacity-80">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+      <div>
+        <p class="font-sc tracking-[0.2em] text-sm mb-3 text-rosa">Tienda</p>
+        <ul class="space-y-1"><li><a href="#coleccion">Colección</a></li><li><a href="#dedicatoria">Dedicatoria</a></li><li><a href="#contacto">Personalizada</a></li></ul>
+      </div>
+      <div>
+        <p class="font-sc tracking-[0.2em] text-sm mb-3 text-rosa">Información</p>
+        <ul class="space-y-1"><li><a href="#taller">El taller</a></li><li><a href="#">Envíos</a></li><li><a href="#">Preguntas</a></li></ul>
+      </div>
+      <div>
+        <p class="font-sc tracking-[0.2em] text-sm mb-3 text-rosa">Síguenos</p>
+        <ul class="space-y-1"><li><a href="https://instagram.com/dvash.studio">Instagram</a></li><li><a href="#">Pinterest</a></li></ul>
+      </div>
+      <div>
+        <p class="font-sc tracking-[0.2em] text-sm mb-3 text-rosa">Visítanos</p>
+        <p>Calle de Lagasca, 61<br>28001 Madrid<br><a href="#visitanos" class="hover:text-rosa underline underline-offset-4">Horario de la tienda</a></p>
+      </div>
+    </div>
+    <div class="flex justify-between items-end border-t border-oliva/20 pt-8 dark:border-crema/20">
+      <img src="img/logo-dvash.webp" alt="Dvash" class="h-16 md:h-28">
+      <a href="#" class="font-sc tracking-wider text-sm hover:text-rosa">↑ volver arriba</a>
+    </div>
+  </footer>
 </body>
 </html> 
