@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dvash Studio · Biblias pintadas a mano</title>
+  <link rel="icon" href="img/favicon.webp" type="image/webp">
+
+  <script>try{if(localStorage.getItem('modo')==='oscuro')document.documentElement.classList.add('dark')}catch(e){}</script>
+  <!-- Tailwind CSS v4 (Play CDN) + sistema de diseño propio -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @custom-variant dark (&:where(.dark, .dark *));
+    @theme {
+      --color-crema: #F6F1E3;   /* fondo papel */
+      --color-lino:  #ECE3D3;   /* fondo secundario */
+      --color-oliva: #4F5A3A;   /* verde del monograma */
+      --color-rosa:  #9C7D72;   /* rosa del sello */
+      --color-rubor: #E7D3CA;   /* rosa claro */
+      --color-oro:   #B39150;   /* dorado (solo detalles) */
+      --color-noche: #1E2318;   /* fondo modo oscuro */
+      --color-musgo: #2A3122;   /* fondo secundario modo oscuro */
+      --font-serif:  "Cormorant Garamond", serif;
+      --font-sc:     "Cormorant SC", serif;
+      --font-script: "Pinyon Script", cursive;
+      --font-titulo: "Cormorant SC", serif;
+      --font-texto:  "Cormorant Garamond", serif;
+    }
+  </style>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+SC:wght@500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="papel bg-crema text-oliva transition-colors duration-500 font-serif text-[17px] leading-relaxed dark:bg-noche dark:text-crema">
+
+</body>
+</html> 

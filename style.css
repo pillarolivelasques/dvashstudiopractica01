@@ -1,0 +1,121 @@
+
+
+@layer theme, base, components, utilities;
+
+/* ---------- BASE ---------- */
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { -webkit-font-smoothing: antialiased; }
+  button { cursor: pointer; }
+  ::selection { background: #E7D3CA; color: #4F5A3A; }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  summary:focus-visible { outline: 2px solid #9C7D72; outline-offset: 3px; }
+
+  /* El logo es verde oliva: en modo oscuro lo pasamos a crema */
+  .dark img[src$="logo-dvash.webp"] { filter: brightness(0) invert(94%) sepia(12%); }
+}
+
+/* ---------- COMPONENTES ---------- */
+@layer components {
+
+
+  .foto {
+    background: #ECE3D3;
+    border: 1px dashed rgba(79, 90, 58, .35);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center; padding: 1.5rem;
+    font-family: "Cormorant SC", serif; letter-spacing: .08em;
+    color: rgba(79, 90, 58, .7); font-size: 15px; line-height: 1.4;
+  }
+  .dark .foto { background: #2A3122; border-color: rgba(246, 241, 227, .3); color: rgba(246, 241, 227, .7); }
+
+  /* Papel de acuarela */
+  .papel { background-image: url(img/papel.webp); background-size: 600px; background-blend-mode: multiply; }
+  .dark .papel, .dark.papel { background-image: none; }
+ 
+  .dark .dibujo { filter: brightness(0) invert(94%) sepia(12%); opacity: .85; }
+
+  /* Capitular */
+  .capitular::first-letter { font-size: 1.7em; line-height: 1; }
+
+  /* Ornamento que se dibuja al entrar en pantalla */
+  .ornamento path { stroke-dasharray: 120; stroke-dashoffset: 120; animation: trazo 2.4s ease forwards; }
+
+  /* Palomas que cruzan la sección del salmo: una de izquierda a derecha y otra al revés */
+  .paloma { position: absolute; width: clamp(56px, 7vw, 96px); left: 0; pointer-events: none; will-change: transform; }
+  .paloma-verde { top: 16%; animation: vuelo-derecha 16s linear infinite; }
+  .paloma-rosa  { top: 30%; animation: vuelo-izquierda 19s linear infinite; animation-delay: -6s; }
+
+  /* Cordero: respira despacio y se mece un poco */
+  .cordero { transform-origin: 50% 90%; animation: respirar 5s ease-in-out infinite; }
+  /* Ángel: vuela flotando y se inclina como si tocara la trompeta */
+  .angel-vuela { animation: angel 7s ease-in-out infinite; transform-origin: 40% 60%; }
+
+  
+  /* Portada*/
+  .portada-velo { background: radial-gradient(ellipse 30% 26% at 50% 50%, rgba(246,241,227,.92) 40%, rgba(246,241,227,0) 100%); }
+  .dark .portada-velo { background: radial-gradient(ellipse 30% 26% at 50% 50%, #1E2318 45%, rgba(30,35,24,0) 100%); }
+  @media (max-width: 640px) {
+    .portada-velo { background: radial-gradient(ellipse 48% 24% at 50% 50%, rgba(246,241,227,.92) 45%, rgba(246,241,227,0) 100%); }
+    .dark .portada-velo { background: radial-gradient(ellipse 48% 24% at 50% 50%, #1E2318 50%, rgba(30,35,24,0) 100%); }
+  }
+
+  /* Etiqueta de precio*/
+  .etiqueta-precio {
+    position: relative;
+    display: inline-flex; align-items: baseline; gap: .5rem;
+    padding: .35rem 1rem .35rem 1.6rem;
+    background: #E7D3CA; color: #4F5A3A;
+    clip-path: polygon(14px 0, 100% 0, 100% 100%, 14px 100%, 0 50%);
+    font-family: "Cormorant SC", serif; letter-spacing: .08em;
+    transform-origin: 0 50%;
+  }
+  .etiqueta-precio::before {          /* agujerito del cordel */
+    content: ""; position: absolute; left: 9px; top: 50%;
+    width: 6px; height: 6px; margin-top: -3px; border-radius: 50%;
+    background: #F6F1E3;
+  }
+  .dark .etiqueta-precio::before { background: #1E2318; }
+  .etiqueta-precio s { opacity: .55; font-size: .85em; }
+
+  /* Tarjeta de oferta*/
+  .tarjeta-oferta { position: relative; }
+  .tarjeta-oferta::after {
+    content: ""; position: absolute; inset: 0;
+    border: 1px solid currentColor; opacity: 0;
+    transform: scale(.97); transition: opacity .35s ease, transform .35s ease;
+    pointer-events: none;
+  }
+  .tarjeta-oferta:hover::after,
+  .tarjeta-oferta:focus-within::after { opacity: .35; transform: scale(1); }
+  .tarjeta-oferta:hover .etiqueta-precio { animation: balanceo .9s ease-in-out; }
+
+  /* Texto dorado (nombre en la tapa, detalles) */
+  .texto-oro {
+    background: linear-gradient(120deg, #8C6A2C 0%, #E9D08C 35%, #B08E45 50%, #F3DFA2 65%, #8F6E2E 100%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: brillo 6s linear infinite;
+  }
+
+  /* Indicador "abierto / cerrado" del horario */
+  .punto-estado { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; background: #9C7D72; }
+  .punto-estado.abierto { background: #7A8C5A; animation: latido 1.8s ease-out infinite; }
+
+  /* Mapa: tono cálido para que no rompa la paleta */
+  .mapa { filter: sepia(.35) saturate(.8); transition: filter .4s ease; }
+  .mapa:hover { filter: none; }
+  .dark .mapa { filter: invert(.9) hue-rotate(180deg) sepia(.3) saturate(.6); }
+}
+
+/* UTILIDADES */
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { scrollbar-width: none; }
+
+  .animar-flotar { animation: flotar 6s ease-in-out infinite; }
+  .animar-girar-lento { animation: girar 40s linear infinite; }
+}
