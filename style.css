@@ -4,7 +4,7 @@
 
 /* ---------- BASE ---------- */
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }  /* el menú fijo no tapa los títulos */
   body { -webkit-font-smoothing: antialiased; }
   button { cursor: pointer; }
   ::selection { background: #E7D3CA; color: #4F5A3A; }
@@ -14,8 +14,6 @@
   input:focus-visible,
   summary:focus-visible { outline: 2px solid #9C7D72; outline-offset: 3px; }
 
-  /* El logo es verde oliva: en modo oscuro lo pasamos a crema */
-  .dark img[src$="logo-dvash.webp"] { filter: brightness(0) invert(94%) sepia(12%); }
 }
 
 /* ---------- COMPONENTES ---------- */
@@ -30,13 +28,10 @@
     font-family: "Cormorant SC", serif; letter-spacing: .08em;
     color: rgba(79, 90, 58, .7); font-size: 15px; line-height: 1.4;
   }
-  .dark .foto { background: #2A3122; border-color: rgba(246, 241, 227, .3); color: rgba(246, 241, 227, .7); }
 
   /* Papel de acuarela */
   .papel { background-image: url(img/papel.webp); background-size: 600px; background-blend-mode: multiply; }
-  .dark .papel, .dark.papel { background-image: none; }
  
-  .dark .dibujo { filter: brightness(0) invert(94%) sepia(12%); opacity: .85; }
 
   /* Capitular */
   .capitular::first-letter { font-size: 1.7em; line-height: 1; }
@@ -57,10 +52,8 @@
   
   /* Portada*/
   .portada-velo { background: radial-gradient(ellipse 30% 26% at 50% 50%, rgba(246,241,227,.92) 40%, rgba(246,241,227,0) 100%); }
-  .dark .portada-velo { background: radial-gradient(ellipse 30% 26% at 50% 50%, #1E2318 45%, rgba(30,35,24,0) 100%); }
   @media (max-width: 640px) {
     .portada-velo { background: radial-gradient(ellipse 48% 24% at 50% 50%, rgba(246,241,227,.92) 45%, rgba(246,241,227,0) 100%); }
-    .dark .portada-velo { background: radial-gradient(ellipse 48% 24% at 50% 50%, #1E2318 50%, rgba(30,35,24,0) 100%); }
   }
 
   /* Etiqueta de precio*/
@@ -78,7 +71,6 @@
     width: 6px; height: 6px; margin-top: -3px; border-radius: 50%;
     background: #F6F1E3;
   }
-  .dark .etiqueta-precio::before { background: #1E2318; }
   .etiqueta-precio s { opacity: .55; font-size: .85em; }
 
   /* Tarjeta de oferta*/
@@ -111,7 +103,6 @@
   /* Mapa: tono cálido para que no rompa la paleta */
   .mapa { filter: sepia(.35) saturate(.8); transition: filter .4s ease; }
   .mapa:hover { filter: none; }
-  .dark .mapa { filter: invert(.9) hue-rotate(180deg) sepia(.3) saturate(.6); }
 }
 
 /* UTILIDADES */
