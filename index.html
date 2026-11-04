@@ -23,12 +23,12 @@
       --font-serif:  "Cormorant Garamond", serif;
       --font-sc:     "Cormorant SC", serif;
       --font-script: "Pinyon Script", cursive;
+      --font-mano:   "Biro Script", "La Belle Aurore", cursive;   /* letra a mano para la dedicatoria */
       --font-titulo: "Cormorant SC", serif;
       --font-texto:  "Cormorant Garamond", serif;
     }
   </style>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+SC:wght@500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+SC:wght@500&family=Pinyon+Script&family=La+Belle+Aurore&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -93,6 +93,127 @@
       </a>
     </div>
   </section>
+
+  <!-- ===== CARRUSEL NUMERADO ===== -->
+  <section data-aos="fade-up" class="border-b border-oliva/20 dark:border-crema/20">
+    <h2 class="sr-only">Nuestras Biblias</h2>
+    <div class="flex overflow-x-auto snap-x snap-mandatory no-scrollbar">
+      <a href="biblia-the-vine.html" class="snap-start shrink-0 w-[75vw] sm:w-[40vw] lg:w-[25vw] border-r border-oliva/20 group dark:border-crema/20">
+        <span class="relative block aspect-[5/7] overflow-hidden">
+          <img src="img/ramas-frente.webp" alt="Biblia The Vine, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/ramas-trasera.webp" alt="Biblia The Vine, contraportada" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </span>
+        <span class="flex justify-between items-baseline px-4 py-3"><span class="font-sc text-sm">1/4</span><span class="italic text-xl group-hover:text-rosa">The Vine</span></span>
+      </a>
+      <a href="biblia-sweeter-than-honey.html" class="snap-start shrink-0 w-[75vw] sm:w-[40vw] lg:w-[25vw] border-r border-oliva/20 group dark:border-crema/20">
+        <span class="relative block aspect-[5/7] overflow-hidden">
+          <img src="img/jardin-frente.webp" alt="Biblia Sweeter than Honey, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/jardin-trasera.webp" alt="Biblia Sweeter than Honey, contraportada" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </span>
+        <span class="flex justify-between items-baseline px-4 py-3"><span class="font-sc text-sm">2/4</span><span class="italic text-xl group-hover:text-rosa">Sweeter than Honey</span></span>
+      </a>
+      <a href="biblia-lilies-of-the-field.html" class="snap-start shrink-0 w-[75vw] sm:w-[40vw] lg:w-[25vw] border-r border-oliva/20 group dark:border-crema/20">
+        <span class="relative block aspect-[5/7] overflow-hidden">
+          <img src="img/campo-frente.webp" alt="Biblia Lilies of the Field, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/campo-trasera.webp" alt="Biblia Lilies of the Field, contraportada" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </span>
+        <span class="flex justify-between items-baseline px-4 py-3"><span class="font-sc text-sm">3/4</span><span class="italic text-xl group-hover:text-rosa">Lilies of the Field</span></span>
+      </a>
+      <a href="biblia-above-the-waters.html" class="snap-start shrink-0 w-[75vw] sm:w-[40vw] lg:w-[25vw] group">
+        <span class="relative block aspect-[5/7] overflow-hidden">
+          <img src="img/mar-frente.webp" alt="Biblia Above the Waters, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/mar-trasera.webp" alt="Biblia Above the Waters, contraportada" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </span>
+        <span class="flex justify-between items-baseline px-4 py-3"><span class="font-sc text-sm">4/4</span><span class="italic text-xl group-hover:text-rosa">Above the Waters</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== LA DEDICATORIA (vista previa en vivo con jQuery) ===== -->
+  <section data-aos="fade-up" aria-labelledby="t-dedicatoria" class="salmo relative overflow-hidden px-4 md:px-10 py-32 md:py-40 border-b border-oliva/20 dark:border-crema/20">
+    <img src="img/paloma-verde.webp" alt="" aria-hidden="true" class="paloma paloma-verde">
+    <img src="img/paloma-rosa.webp"  alt="" aria-hidden="true" class="paloma paloma-rosa">
+
+    <div class="relative z-10 mx-auto max-w-6xl grid lg:grid-cols-[1fr_1.8fr] gap-12 items-center">
+      <!-- Texto y campos -->
+      <div class="text-center lg:text-left">
+        <p class="font-sc tracking-[0.3em] text-sm text-rosa mb-4">De generación en generación</p>
+        <h2 id="t-dedicatoria" class="italic text-4xl md:text-5xl leading-tight">Una página para tu dedicatoria</h2>
+        <p class="mt-4 max-w-sm mx-auto lg:mx-0">Cada Biblia guarda una página enmarcada en flores para que escribas, de tu puño y letra, unas palabras para quien la recibe. Una Biblia para pasar de padres a hijos, y de hijos a nietos.</p>
+
+        <label for="dedicatoria-texto" class="block font-sc tracking-widest text-sm mt-10 mb-2">Pruébala aquí</label>
+        <textarea id="dedicatoria-texto" rows="3" maxlength="120" placeholder="Para mamá, con todo mi amor."
+                  class="w-full max-w-sm bg-transparent border border-oliva/40 p-3 text-lg italic resize-none placeholder:text-oliva/40 focus:outline-none focus:border-rosa dark:border-crema/40 dark:placeholder:text-crema/40"></textarea>
+
+        <label for="dedicatoria-firma" class="block font-sc tracking-widest text-sm mt-6 mb-2">De parte de</label>
+        <input id="dedicatoria-firma" type="text" maxlength="30" placeholder="Lucía" autocomplete="off"
+               class="w-full max-w-xs bg-transparent border-b border-oliva text-center lg:text-left text-xl italic py-2 placeholder:text-oliva/40 focus:outline-none focus:border-rosa dark:border-crema dark:placeholder:text-crema/40">
+
+        <a href="#contacto" class="block w-fit mx-auto lg:mx-0 mt-10 font-sc tracking-[0.2em] text-sm border-b border-oliva pb-1 hover:text-rosa hover:border-rosa dark:border-crema">encargar la mía</a>
+      </div>
+
+      <!-- Biblia abierta: la dedicatoria se escribe dentro del marco de la página derecha -->
+      <figure class="libro @container relative w-full">
+        <img src="img/libro-dedicatoria.webp" alt="Biblia abierta con marcos de flores pintados y un cordero; en la página derecha, un espacio para la dedicatoria" class="w-full h-auto">
+        <figcaption class="absolute left-[61%] w-[27%] top-[20%] h-[60%] flex flex-col items-center justify-center text-center text-oliva">
+          <span id="dedicatoria-preview" class="block font-mano text-[3.6cqw] leading-snug break-words max-w-full" aria-live="polite">Para mamá, con todo mi amor.</span>
+          <span class="block font-mano text-[3cqw] mt-[2cqw] self-end">— <span id="firma-preview">Lucía</span></span>
+          <span id="fecha-preview" class="block font-sc tracking-widest text-[1.1cqw] mt-[3cqw] text-rosa">noviembre de 2026</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== RECIÉN PINTADAS (al pasar el ratón se ve la contraportada) ===== -->
+  <section data-aos="fade-up" id="coleccion" class="px-4 md:px-10 py-20 border-b border-oliva/20 dark:border-crema/20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+      <div>
+        <h2 class="text-5xl">Recién pintadas</h2>
+        <p class="mt-2 italic text-oliva/70 dark:text-crema/70">Cada Biblia lleva un versículo propio en la contraportada.</p>
+      </div>
+      <a href="#contacto" class="font-sc tracking-[0.2em] text-sm border-b border-oliva pb-1 self-start md:self-auto dark:border-crema">ver todas</a>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
+      <a href="biblia-the-vine.html" class="group">
+        <div class="relative aspect-[5/7] overflow-hidden bg-lino dark:bg-musgo">
+          <img src="img/ramas-frente.webp" alt="The Vine, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/ramas-trasera.webp" alt="The Vine, contraportada con Isaías 40:8" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </div>
+        <p class="text-2xl mt-3 group-hover:text-rosa">The Vine</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/60 dark:text-crema/60">Ramas en acuarela · Isaías 40:8</p>
+        <p class="mt-1">89 €</p>
+      </a>
+      <a href="biblia-sweeter-than-honey.html" class="group">
+        <div class="relative aspect-[5/7] overflow-hidden bg-lino dark:bg-musgo">
+          <img src="img/jardin-frente.webp" alt="Sweeter than Honey, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/jardin-trasera.webp" alt="Sweeter than Honey, contraportada con Salmo 119:103" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </div>
+        <p class="text-2xl mt-3 group-hover:text-rosa">Sweeter than Honey</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/60 dark:text-crema/60">Jardín de miel · Salmo 119:103</p>
+        <p class="mt-1">89 €</p>
+      </a>
+      <a href="biblia-lilies-of-the-field.html" class="group">
+        <div class="relative aspect-[5/7] overflow-hidden bg-lino dark:bg-musgo">
+          <img src="img/campo-frente.webp" alt="Lilies of the Field, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/campo-trasera.webp" alt="Lilies of the Field, contraportada con Salmo 119:103" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </div>
+        <p class="text-2xl mt-3 group-hover:text-rosa">Lilies of the Field</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/60 dark:text-crema/60">Campo de flores · Salmo 119:103</p>
+        <p class="mt-1">89 €</p>
+      </a>
+      <a href="biblia-above-the-waters.html" class="group">
+        <div class="relative aspect-[5/7] overflow-hidden bg-lino dark:bg-musgo">
+          <img src="img/mar-frente.webp" alt="Above the Waters, portada" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:opacity-0">
+          <img src="img/mar-trasera.webp" alt="Above the Waters, contraportada con Deuteronomio 7:9" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
+        </div>
+        <p class="text-2xl mt-3 group-hover:text-rosa">Above the Waters</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/60 dark:text-crema/60">Sobre las aguas · Deuteronomio 7:9</p>
+        <p class="mt-1">89 €</p>
+      </a>
+    </div>
+  </section>
+
 
   </main>
 </body>
