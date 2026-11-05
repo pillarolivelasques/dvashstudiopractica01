@@ -50,6 +50,7 @@
       <a href="#" class="justify-self-center"><img src="img/logo-dvash.webp" alt="Dvash" class="h-10 md:h-12"></a>
       <ul class="flex items-center gap-5 lg:gap-8 justify-end font-sc tracking-widest text-sm">
         <li class="hidden md:block"><a href="#taller" class="hover:text-rosa">El taller</a></li>
+        <li class="hidden lg:block"><a href="#talleres" class="hover:text-rosa">Talleres</a></li>
         <li class="hidden md:block"><a href="#visitanos" class="hover:text-rosa">Visítanos</a></li>
         <li><a href="#coleccion" class="hover:text-rosa">Encargar</a></li>
         <li><button type="button" id="btn-carrito" class="relative p-1 -m-1 hover:text-rosa" aria-label="Carrito (0)" aria-expanded="false" aria-controls="panel-carrito">
@@ -66,6 +67,7 @@
         <li><a href="#dedicatoria" class="block py-3 border-b border-oliva/10 hover:text-rosa">Dedicatoria</a></li>
         <li><a href="#ofertas" class="block py-3 border-b border-oliva/10 hover:text-rosa">Ofertas</a></li>
         <li><a href="#taller" class="block py-3 border-b border-oliva/10 hover:text-rosa">El taller</a></li>
+        <li><a href="#talleres" class="block py-3 border-b border-oliva/10 hover:text-rosa">Talleres</a></li>
         <li><a href="#visitanos" class="block py-3 border-b border-oliva/10 hover:text-rosa">Visítanos</a></li>
         <li><a href="#coleccion" class="block py-3 hover:text-rosa">Encargar</a></li>
       </ul>
@@ -294,6 +296,96 @@
     </ol>
   </section>
 
+  <!-- ===== TALLERES EN LA TIENDA (reservas con jQuery) ===== -->
+  <section data-aos="fade-up" id="talleres" class="px-4 md:px-10 py-20 border-b border-oliva/20 bg-lino">
+    <div class="grid md:grid-cols-12 gap-8 mb-14">
+      <div class="md:col-span-3 flex md:flex-col justify-between items-start gap-6">
+        <p class="font-sc tracking-[0.2em] text-sm text-rosa">Talleres en la tienda</p>
+        <img src="img/cordero.webp" alt="" aria-hidden="true" class="dibujo cordero w-28 md:w-44" loading="lazy">
+      </div>
+      <div class="md:col-span-9">
+        <h2 class="text-4xl md:text-6xl leading-tight">Aprende a pintar con nosotras, <em>los sábados en Lagasca.</em></h2>
+        <p class="mt-4 max-w-xl text-oliva/75">Grupos de ocho personas como máximo. El material está incluido, y siempre hay café y algo dulce.</p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-16">
+      <article class="taller bg-crema p-6 md:p-8 flex flex-col gap-4" data-taller="acuarela">
+        <p class="font-sc tracking-[0.2em] text-xs text-rosa">Iniciación</p>
+        <h3 class="text-3xl leading-tight">Acuarela botánica</h3>
+        <p class="text-oliva/75 flex-1">Hojas, ramas y flores como las de nuestras tapas. Para quien nunca ha cogido un pincel.</p>
+        <dl class="text-sm border-t border-oliva/15 pt-3 space-y-1">
+          <div class="flex justify-between"><dt class="text-oliva/60">Cuándo</dt><dd>Sábados · 10:30</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/60">Duración</dt><dd>2 h 30</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/60">Precio</dt><dd>35 €</dd></div>
+        </dl>
+        <p class="plazas font-sc tracking-wider text-sm text-rosa">Quedan <span class="plazas-num">3</span> plazas</p>
+        <button type="button" class="btn-reservar bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-3 hover:bg-rosa transition">Reservar plaza</button>
+      </article>
+
+      <article class="taller bg-crema p-6 md:p-8 flex flex-col gap-4" data-taller="letra">
+        <p class="font-sc tracking-[0.2em] text-xs text-rosa">Caligrafía</p>
+        <h3 class="text-3xl leading-tight">Letra a mano para tu dedicatoria</h3>
+        <p class="text-oliva/75 flex-1">Practica una letra bonita y fácil para escribir la página de la dedicatoria de tu Biblia.</p>
+        <dl class="text-sm border-t border-oliva/15 pt-3 space-y-1">
+          <div class="flex justify-between"><dt class="text-oliva/60">Cuándo</dt><dd>Sábados · 17:00</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/60">Duración</dt><dd>2 h</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/60">Precio</dt><dd>30 €</dd></div>
+        </dl>
+        <p class="plazas font-sc tracking-wider text-sm text-rosa">Quedan <span class="plazas-num">5</span> plazas</p>
+        <button type="button" class="btn-reservar bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-3 hover:bg-rosa transition">Reservar plaza</button>
+      </article>
+
+      <article class="taller bg-oliva text-crema p-6 md:p-8 flex flex-col gap-4" data-taller="tapa">
+        <p class="font-sc tracking-[0.2em] text-xs text-rubor">Dos sesiones</p>
+        <h3 class="text-3xl leading-tight">Pinta la tapa de tu Biblia</h3>
+        <p class="opacity-80 flex-1">Diseñas y pintas tu propia tapa; nosotras la imprimimos, la forramos y te la entregamos terminada.</p>
+        <dl class="text-sm border-t border-crema/20 pt-3 space-y-1">
+          <div class="flex justify-between"><dt class="opacity-60">Cuándo</dt><dd>Dos sábados · 10:30</dd></div>
+          <div class="flex justify-between"><dt class="opacity-60">Incluye</dt><dd>La Biblia terminada</dd></div>
+          <div class="flex justify-between"><dt class="opacity-60">Precio</dt><dd>120 €</dd></div>
+        </dl>
+        <p class="plazas font-sc tracking-wider text-sm text-rubor">Quedan <span class="plazas-num">2</span> plazas</p>
+        <button type="button" class="btn-reservar bg-crema text-oliva font-sc tracking-[0.2em] text-sm py-3 hover:bg-rubor transition">Reservar plaza</button>
+      </article>
+    </div>
+
+    <!-- Formulario de reserva -->
+    <div class="max-w-2xl mx-auto">
+      <h3 class="font-sc tracking-[0.25em] text-xl text-center mb-8">Reserva tu plaza</h3>
+      <form id="form-taller" novalidate class="grid sm:grid-cols-2 gap-x-6 gap-y-5">
+        <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Taller
+          <select id="taller-select" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+            <option value="acuarela">Acuarela botánica · 35 €</option>
+            <option value="letra">Letra a mano · 30 €</option>
+            <option value="tapa">Pinta la tapa de tu Biblia · 120 €</option>
+          </select>
+        </label>
+        <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Fecha
+          <select id="taller-fecha" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva"></select>
+        </label>
+        <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Nombre
+          <input id="taller-nombre" type="text" autocomplete="name" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+        </label>
+        <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Email
+          <input id="taller-email" type="email" autocomplete="email" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+        </label>
+        <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Personas
+          <input id="taller-personas" type="number" min="1" max="4" value="1" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+        </label>
+        <p class="self-end text-2xl sm:text-right">Total: <span id="taller-total">35</span> €</p>
+        <p id="taller-error" class="sm:col-span-2 italic text-rosa min-h-6" aria-live="polite"></p>
+        <button type="submit" class="sm:col-span-2 bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-4 hover:bg-rosa transition">Reservar</button>
+      </form>
+      <div id="taller-ok" class="text-center border border-oliva/30 p-8" style="display:none" aria-live="polite">
+        <p class="font-sc tracking-[0.2em] text-sm text-rosa mb-2">¡Plaza reservada!</p>
+        <p id="taller-resumen" class="text-2xl"></p>
+        <p class="mt-2 italic text-oliva/70">Te escribimos al email con los detalles. Te esperamos en Lagasca, 61.</p>
+        <button type="button" id="taller-otra" class="mt-6 font-sc tracking-[0.2em] text-sm border-b border-oliva pb-1 hover:text-rosa">hacer otra reserva</button>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== LA TIENDA: HORARIO Y UBICACIÓN ===== -->
   <section data-aos="fade-up" id="visitanos" class="px-4 md:px-10 py-20 md:py-28 border-b border-oliva/20 grid md:grid-cols-2 gap-12 md:gap-16 items-start">
     <figure class="md:order-2 md:sticky md:top-8">
@@ -364,7 +456,7 @@
       </div>
       <div>
         <p class="font-sc tracking-[0.2em] text-sm mb-3 text-rosa">Información</p>
-        <ul class="space-y-1"><li><a href="#taller">El taller</a></li><li><a href="#visitanos">Visítanos</a></li><li><a href="#ofertas">Ofertas</a></li></ul>
+        <ul class="space-y-1"><li><a href="#taller">El taller</a></li><li><a href="#talleres">Talleres</a></li><li><a href="#visitanos">Visítanos</a></li><li><a href="#ofertas">Ofertas</a></li></ul>
       </div>
       <div>
         <p class="font-sc tracking-[0.2em] text-sm mb-3 text-rosa">Síguenos</p>
@@ -425,6 +517,71 @@
           if (String($(this).data('dias')).split(',').indexOf(String(dia)) !== -1) $(this).addClass('font-medium text-rosa');
         });
       })();
+
+      // Talleres: reserva de plazas con validación
+      const talleres = {
+        acuarela: { nombre: 'Acuarela botánica', precio: 35, plazas: 3, fechas: ['Sábado 14 de noviembre · 10:30', 'Sábado 21 de noviembre · 10:30', 'Sábado 12 de diciembre · 10:30'] },
+        letra:    { nombre: 'Letra a mano para tu dedicatoria', precio: 30, plazas: 5, fechas: ['Sábado 14 de noviembre · 17:00', 'Sábado 28 de noviembre · 17:00', 'Sábado 19 de diciembre · 17:00'] },
+        tapa:     { nombre: 'Pinta la tapa de tu Biblia', precio: 120, plazas: 2, fechas: ['Sábados 21 y 28 de noviembre · 10:30', 'Sábados 12 y 19 de diciembre · 10:30'] }
+      };
+
+      function pintarPlazas(clave) {
+        const libres = talleres[clave].plazas;
+        const $card = $('.taller[data-taller="' + clave + '"]');
+        $card.find('.plazas').html(libres > 0 ? 'Quedan <span class="plazas-num">' + libres + '</span> plaza' + (libres === 1 ? '' : 's') : 'Completo');
+        $card.find('.btn-reservar').prop('disabled', libres === 0).toggleClass('opacity-40 cursor-not-allowed', libres === 0);
+      }
+
+      function actualizarFormulario() {
+        const t = talleres[$('#taller-select').val()];
+        $('#taller-fecha').empty();
+        $.each(t.fechas, function (i, fecha) { $('#taller-fecha').append($('<option>').text(fecha)); });
+        $('#taller-personas').attr('max', Math.max(1, Math.min(4, t.plazas)));
+        actualizarTotal();
+      }
+      function actualizarTotal() {
+        const t = talleres[$('#taller-select').val()];
+        const personas = Math.max(1, parseInt($('#taller-personas').val(), 10) || 1);
+        $('#taller-total').text(t.precio * personas);
+      }
+
+      $('#taller-select').on('change', function () { $('#taller-error').text(''); actualizarFormulario(); });
+      $('#taller-personas').on('input', actualizarTotal);
+      actualizarFormulario();
+
+      // "Reservar plaza" en una tarjeta: elige ese taller y baja hasta el formulario
+      $('.btn-reservar').on('click', function () {
+        $('#taller-select').val($(this).closest('.taller').data('taller')).trigger('change');
+        $('#taller-ok').hide(); $('#form-taller').show();
+        $('html, body').animate({ scrollTop: $('#form-taller').offset().top - 140 }, 500);
+        $('#taller-nombre').trigger('focus');
+      });
+
+      $('#form-taller').on('submit', function (e) {
+        e.preventDefault();
+        const clave = $('#taller-select').val(), t = talleres[clave];
+        const nombre = $.trim($('#taller-nombre').val());
+        const email = $.trim($('#taller-email').val());
+        const personas = parseInt($('#taller-personas').val(), 10);
+        let error = '';
+        if (nombre.length < 2) error = 'Escribe tu nombre.';
+        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) error = 'Revisa el email.';
+        else if (!(personas >= 1 && personas <= 4)) error = 'Puedes reservar de 1 a 4 plazas.';
+        else if (personas > t.plazas) error = t.plazas === 0 ? 'Este taller está completo.' : 'Solo quedan ' + t.plazas + ' plazas en este taller.';
+        if (error) { $('#taller-error').hide().text(error).fadeIn(200); return; }
+
+        t.plazas -= personas;
+        pintarPlazas(clave);
+        $('#taller-error').text('');
+        $('#taller-resumen').text(nombre + ', ' + personas + (personas === 1 ? ' plaza' : ' plazas') + ' en «' + t.nombre + '», ' + $('#taller-fecha').val().toLowerCase() + '.');
+        $(this).fadeOut(200, function () { $('#taller-ok').fadeIn(300); });
+      });
+
+      $('#taller-otra').on('click', function () {
+        $('#form-taller')[0].reset();
+        actualizarFormulario();
+        $('#taller-ok').fadeOut(200, function () { $('#form-taller').fadeIn(300); });
+      });
 
       // Animaciones al hacer scroll (librería AOS)
       if (window.AOS) AOS.init({ once: true, duration: 800, easing: 'ease-out-cubic', offset: 60 });

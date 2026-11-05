@@ -169,6 +169,13 @@
   60%      { transform: translate(-4px, -6px) rotate(-1deg); }
 }
 
+/* Cordero de los talleres: respira despacio */
+@keyframes respirar {
+  0%, 100% { transform: scale(1, 1) rotate(0deg); }
+  40%      { transform: scale(1.012, 1.03) rotate(-1deg); }
+  70%      { transform: scale(1.005, 1.01) rotate(.6deg); }
+}
+
 /* Respeta a quien prefiere menos movimiento (ajuste del sistema operativo) */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
