@@ -61,7 +61,7 @@
     position: relative;
     display: inline-flex; align-items: baseline; gap: .5rem;
     padding: .35rem 1rem .35rem 1.6rem;
-    background: #E7D3CA; color: #4F5A3A;
+    background: var(--color-rubor); color: var(--color-oliva);
     clip-path: polygon(14px 0, 100% 0, 100% 100%, 14px 100%, 0 50%);
     font-family: "Cormorant SC", serif; letter-spacing: .08em;
     transform-origin: 0 50%;
@@ -69,7 +69,7 @@
   .etiqueta-precio::before {          /* agujerito del cordel */
     content: ""; position: absolute; left: 9px; top: 50%;
     width: 6px; height: 6px; margin-top: -3px; border-radius: 50%;
-    background: #F6F1E3;
+    background: var(--color-crema);
   }
   .etiqueta-precio s { opacity: .55; font-size: .85em; }
 
@@ -92,6 +92,14 @@
     -webkit-background-clip: text; background-clip: text; color: transparent;
     animation: brillo 6s linear infinite;
   }
+
+  /* ---- Modo oscuro ---- */
+  .dark .papel { background-image: none; }                 /* sin textura de papel */
+  .dark .dibujo { filter: brightness(0) invert(92%) sepia(20%) saturate(1.6); opacity: .85; }  /* dibujos a línea en crema */
+  .dark img[src$="logo-dvash.webp"] { filter: brightness(0) invert(92%) sepia(20%) saturate(1.6); }
+  .dark .portada-velo { background: radial-gradient(ellipse 30% 26% at 50% 50%, rgba(34,27,22,.9) 40%, rgba(34,27,22,0) 100%); }
+  @media (max-width: 640px) { .dark .portada-velo { background: radial-gradient(ellipse 48% 24% at 50% 50%, rgba(34,27,22,.9) 45%, rgba(34,27,22,0) 100%); } }
+  .dark .portada-ramas { opacity: .8; }
 
   /* Biblia abierta de la dedicatoria: sombra que sigue la forma del libro (la imagen no tiene fondo) */
   .libro img { filter: drop-shadow(0 18px 28px rgba(43, 36, 28, .22)); }
