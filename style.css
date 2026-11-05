@@ -30,7 +30,7 @@
   }
 
   /* Papel de acuarela */
-  .papel { background-image: url(img/papel.webp); background-size: 600px; background-blend-mode: multiply; }
+  .papel { background-image: url(img/papel-crema.webp); background-size: 600px; }  /* papel ya teñido de crema: Safari en iPhone no aplica blend-mode en el body */
  
 
   /* Capitular */
