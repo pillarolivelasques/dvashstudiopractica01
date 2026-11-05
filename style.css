@@ -7,37 +7,21 @@
   html { scroll-behavior: smooth; scroll-padding-top: 6rem; }  /* el menú fijo no tapa los títulos */
   body { -webkit-font-smoothing: antialiased; }
   button { cursor: pointer; }
-  ::selection { background: #E7D3CA; color: #4F5A3A; }
+  ::selection { background: var(--color-rubor); color: var(--color-oliva); }
 
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
-  summary:focus-visible { outline: 2px solid #9C7D72; outline-offset: 3px; }
+  summary:focus-visible { outline: 2px solid var(--color-rosa); outline-offset: 3px; }
 
 }
 
 /* ---------- COMPONENTES ---------- */
 @layer components {
 
-
-  .foto {
-    background: #ECE3D3;
-    border: 1px dashed rgba(79, 90, 58, .35);
-    display: flex; align-items: center; justify-content: center;
-    text-align: center; padding: 1.5rem;
-    font-family: "Cormorant SC", serif; letter-spacing: .08em;
-    color: rgba(79, 90, 58, .7); font-size: 15px; line-height: 1.4;
-  }
-
   /* Papel de acuarela */
   .papel { background-image: url(img/papel-crema.webp); background-size: 600px; }  /* papel ya teñido de crema: Safari en iPhone no aplica blend-mode en el body */
  
-
-  /* Capitular */
-  .capitular::first-letter { font-size: 1.7em; line-height: 1; }
-
-  /* Ornamento que se dibuja al entrar en pantalla */
-  .ornamento path { stroke-dasharray: 120; stroke-dashoffset: 120; animation: trazo 2.4s ease forwards; }
 
   /* Palomas que cruzan la sección del salmo: una de izquierda a derecha y otra al revés */
   .paloma { position: absolute; width: clamp(56px, 7vw, 96px); left: 0; pointer-events: none; will-change: transform; }
@@ -85,14 +69,6 @@
   .tarjeta-oferta:focus-within::after { opacity: .35; transform: scale(1); }
   .tarjeta-oferta:hover .etiqueta-precio { animation: balanceo .9s ease-in-out; }
 
-  /* Texto dorado (nombre en la tapa, detalles) */
-  .texto-oro {
-    background: linear-gradient(120deg, #8C6A2C 0%, #E9D08C 35%, #B08E45 50%, #F3DFA2 65%, #8F6E2E 100%);
-    background-size: 200% 100%;
-    -webkit-background-clip: text; background-clip: text; color: transparent;
-    animation: brillo 6s linear infinite;
-  }
-
   /* ---- Modo oscuro ---- */
   .dark .papel { background-image: none; }                 /* sin textura de papel */
   .dark .dibujo { filter: brightness(0) invert(92%) sepia(20%) saturate(1.6); opacity: .85; }  /* dibujos a línea en crema */
@@ -105,12 +81,9 @@
   .libro img { filter: drop-shadow(0 18px 28px rgba(43, 36, 28, .22)); }
 
   /* Indicador "abierto / cerrado" del horario */
-  .punto-estado { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; background: #9C7D72; }
+  .punto-estado { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; background: var(--color-rosa); }
   .punto-estado.abierto { background: #7A8C5A; animation: latido 1.8s ease-out infinite; }
 
-  /* Mapa: tono cálido para que no rompa la paleta */
-  .mapa { filter: sepia(.35) saturate(.8); transition: filter .4s ease; }
-  .mapa:hover { filter: none; }
 }
 
 /* UTILIDADES */
@@ -119,7 +92,7 @@
   .no-scrollbar { scrollbar-width: none; }
 
   .animar-flotar { animation: flotar 6s ease-in-out infinite; }
-  .animar-girar-lento { animation: girar 40s linear infinite; }
+
 }
 /* ---------- PALOMAS (vuelo de la sección de la dedicatoria) ---------- */
 /* Vuelo con un leve sube y baja, como un aleteo */
@@ -138,7 +111,6 @@
   100% { transform: translate(-15vw, 0)    rotate(4deg); }
 }
 @media (prefers-reduced-motion: reduce) {
-  .paloma { animation: none; }
   .paloma-verde { left: 18%; } .paloma-rosa { left: auto; right: 18%; }
 }
 
@@ -148,19 +120,11 @@
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-10px); }
 }
-@keyframes girar {
-  to { transform: rotate(360deg); }
-}
 /* Etiqueta de precio: se balancea al pasar el ratón por la oferta */
 @keyframes balanceo {
   0%, 100% { transform: rotate(0); }
   25%      { transform: rotate(-4deg); }
   60%      { transform: rotate(3deg); }
-}
-/* Brillo que recorre el texto dorado */
-@keyframes brillo {
-  from { background-position: 0% 50%; }
-  to   { background-position: 200% 50%; }
 }
 /* Punto verde de "abierto ahora": late como una señal */
 @keyframes latido {
@@ -168,8 +132,6 @@
   70%  { box-shadow: 0 0 0 10px rgba(122, 140, 90, 0); }
   100% { box-shadow: 0 0 0 0 rgba(122, 140, 90, 0); }
 }
-/* Ornamento que se dibuja trazo a trazo */
-@keyframes trazo { to { stroke-dashoffset: 0; } }
 /* Ángel con trompeta: vuela flotando e inclinándose */
 @keyframes angel {
   0%, 100% { transform: translate(0, 0) rotate(-3deg); }
