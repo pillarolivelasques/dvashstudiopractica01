@@ -80,6 +80,9 @@
   /* Biblia abierta de la dedicatoria: sombra que sigue la forma del libro (la imagen no tiene fondo) */
   .libro img { filter: drop-shadow(0 18px 28px rgba(43, 36, 28, .22)); }
 
+  /* Carrusel de la colección (Swiper): puntos con los colores de la marca, debajo de las Biblias */
+  .coleccion-swiper { --swiper-theme-color: var(--color-oliva); --swiper-pagination-bullet-inactive-color: var(--color-oliva); }
+
   /* Indicador "abierto / cerrado" del horario */
   .punto-estado { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; background: var(--color-rosa); }
   .punto-estado.abierto { background: #7A8C5A; animation: latido 1.8s ease-out infinite; }
@@ -88,8 +91,6 @@
 
 /* UTILIDADES */
 @layer utilities {
-  .no-scrollbar::-webkit-scrollbar { display: none; }
-  .no-scrollbar { scrollbar-width: none; }
 
   .animar-flotar { animation: flotar 6s ease-in-out infinite; }
 
@@ -150,3 +151,6 @@
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* Fuera de las capas a propósito: el CSS de Swiper no usa @layer y ganaría a cualquier regla dentro de una capa */
+.coleccion-swiper .swiper-pagination { position: static; padding: 1rem 0 1.25rem; }

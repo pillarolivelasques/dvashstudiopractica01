@@ -12,6 +12,7 @@ Dvash Studio es una tienda-taller en el barrio de Salamanca (Madrid) que hace Bi
 - **Tailwind CSS v4** (Play CDN) con un sistema de diseño propio en `@theme`: colores, tipografías
 - **CSS propio** (`style.css`), organizado en capas: componentes, utilidades y animaciones con `@keyframes`
 - **jQuery**: menú móvil, carrito, vista previa de la dedicatoria, horario de la tienda y páginas de producto
+- **Swiper**: carrusel de la colección (se arrastra con el dedo o el ratón)
 - **AOS**: animaciones al hacer scroll
 - **Modo oscuro** con la variante `dark:` de Tailwind: las variables del `@theme` cambian de valor y la elección se guarda con localStorage
 - Imágenes en **WebP**
@@ -44,4 +45,5 @@ Cada parte de la web se hizo en su propia rama y después se unió a `main`:
 | `animaciones` | animaciones CSS |
 | `interacciones-js` | jQuery: carrito, menú fijo, dedicatoria, horario y AOS |
 | `talleres` | talleres en la tienda (acuarela, letra, tapa) con formulario de reserva |
+| `carrusel-swiper` | carrusel de la colección con la librería Swiper |
 | `modo-oscuro` | modo oscuro «miel a la luz de una vela» con `dark:` y botón luna/sol |
