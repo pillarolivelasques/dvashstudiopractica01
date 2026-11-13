@@ -15,7 +15,7 @@
       --color-crema: #F6F1E3;   /* fondo papel */
       --color-lino:  #ECE3D3;   /* fondo secundario */
       --color-oliva: #4F5A3A;   /* verde del monograma */
-      --color-rosa:  #9C7D72;   /* rosa del sello */
+      --color-rosa:  #7D5F55;   /* rosa del sello (más oscuro para que se lea bien) */
       --color-rubor: #E7D3CA;   /* rosa claro */
       --color-oro:   #B39150;   /* dorado (solo detalles) */
       --font-serif:  "Cormorant Garamond", serif;
@@ -91,7 +91,7 @@
     <!-- Carrito (se abre con jQuery, ver js/carrito.js) -->
     <div id="panel-carrito" class="absolute right-4 md:right-10 top-full mt-px w-[min(22rem,calc(100vw-2rem))] bg-crema border border-oliva/20 shadow-lg p-6 z-50" style="display:none">
       <p class="font-sc tracking-[0.2em] text-sm text-rosa mb-3">Tu carrito</p>
-      <p id="carrito-vacio" class="italic text-oliva/70">Todavía no has añadido ninguna Biblia.</p>
+      <p id="carrito-vacio" class="italic text-oliva/90">Todavía no has añadido ninguna Biblia.</p>
       <div id="carrito-lleno" style="display:none">
         <ul id="lista-carrito"></ul>
         <label class="flex items-center gap-3 mt-4 text-sm cursor-pointer">
@@ -100,7 +100,7 @@
         </label>
         <p class="flex justify-between mt-3 text-xl"><span>Total</span><span id="total-carrito">0 €</span></p>
         <a id="finalizar-encargo" href="mailto:" class="block text-center mt-5 bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-3 hover:bg-rosa transition">Finalizar encargo</a>
-        <button id="vaciar-carrito" type="button" class="block mx-auto mt-3 text-sm italic text-oliva/60 hover:text-rosa">vaciar carrito</button>
+        <button id="vaciar-carrito" type="button" class="block mx-auto mt-3 text-sm italic text-oliva/90 hover:text-rosa">vaciar carrito</button>
       </div>
     </div>
   </header>
@@ -123,7 +123,7 @@
             <img src="img/ramas-frente.webp" alt="" class="w-full aspect-[5/7] object-cover">
             <span class="block font-sc text-sm py-2">Portada</span>
           </button>
-          <button class="miniatura border border-transparent hover:border-oliva/40" data-foto="img/ramas-trasera.webp" data-alt="The Vine, contraportada">
+          <button class="miniatura border border-transparent hover:border-oliva/70" data-foto="img/ramas-trasera.webp" data-alt="The Vine, contraportada">
             <img src="img/ramas-trasera.webp" alt="" class="w-full aspect-[5/7] object-cover">
             <span class="block font-sc text-sm py-2">Contraportada</span>
           </button>
@@ -132,19 +132,19 @@
 
       <!-- Información -->
       <div class="md:sticky md:top-28 self-start">
-        <nav aria-label="Ruta" class="font-sc text-sm tracking-wider text-oliva/60 mb-6">
+        <nav aria-label="Ruta" class="font-sc text-sm tracking-wider text-oliva/90 mb-6">
           <a href="index.html" class="hover:text-rosa">Inicio</a> /
           <a href="index.html#coleccion" class="hover:text-rosa">Colección</a> /
           <span>The Vine</span>
         </nav>
         <p class="font-sc tracking-[0.2em] text-sm text-rosa">Ramas en acuarela</p>
         <h1 class="text-5xl md:text-6xl leading-tight mt-2">The Vine</h1>
-        <p class="italic text-oliva/70 text-xl">La Vid</p>
+        <p class="italic text-oliva/90 text-xl">La Vid</p>
 
         <p class="text-3xl mt-6"><span id="precio">89</span> €</p>
 
         <p class="mt-6 text-xl">Ramas verdes que crecen por toda la tapa, pintadas en acuarela sobre fondo crudo. Es la más tranquila de la colección: nada compite con lo que hay dentro.</p>
-        <p class="mt-4 text-oliva/80">Su nombre viene de Juan 15, «Yo soy la vid, vosotros los pámpanos». Las ramas abrazan la portada y siguen por la contraportada, donde está Isaías 40:8: la hierba se seca, pero la Palabra permanece. Una Biblia para leer cada día durante muchos años.</p>
+        <p class="mt-4 text-oliva/90">Su nombre viene de Juan 15, «Yo soy la vid, vosotros los pámpanos». Las ramas abrazan la portada y siguen por la contraportada, donde está Isaías 40:8: la hierba se seca, pero la Palabra permanece. Una Biblia para leer cada día durante muchos años.</p>
 
         <blockquote class="mt-8 border-l-2 border-rosa pl-5 italic">
           «Sécase la hierba, marchítase la flor; mas la palabra del Dios nuestro permanece para siempre.»
@@ -155,36 +155,36 @@
         <div class="mt-8 border-t border-oliva/20 pt-6">
           <label class="flex items-center gap-3 cursor-pointer">
             <input id="personalizar" type="checkbox" class="accent-oliva w-4 h-4">
-            <span>Añadir un nombre en dorado <span class="text-oliva/60">(+15 €)</span></span>
+            <span>Añadir un nombre en dorado <span class="text-oliva/90">(+15 €)</span></span>
           </label>
           <div id="campo-nombre" class="mt-4" style="display:none">
             <label for="nombre" class="font-sc text-sm tracking-wider">Nombre o iniciales</label>
-            <input id="nombre" type="text" maxlength="20" placeholder="Ej.: Sofía" class="mt-1 w-full bg-transparent border-b border-oliva py-2 outline-none placeholder:text-oliva/40">
+            <input id="nombre" type="text" maxlength="20" placeholder="Ej.: Sofía" class="mt-1 w-full bg-transparent border-b border-oliva py-2 outline-none placeholder:text-oliva/90">
             <p id="falta-nombre" class="mt-2 text-sm italic text-rosa" style="display:none">Escribe el nombre o las iniciales.</p>
             <label class="flex items-center gap-3 mt-4 cursor-pointer">
               <input id="bautizo" type="checkbox" class="accent-oliva w-4 h-4">
-              <span>Es para un bautizo <span class="text-oliva/60">(en noviembre el nombre va de regalo)</span></span>
+              <span>Es para un bautizo <span class="text-oliva/90">(en noviembre el nombre va de regalo)</span></span>
             </label>
-            <p class="mt-3 italic text-oliva/70">Así se verá: <span id="vista-nombre" class="font-serif text-2xl tracking-wide" style="background:linear-gradient(120deg,#8C6A2C 0%,#E9D08C 35%,#B08E45 50%,#F3DFA2 65%,#8F6E2E 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 rgba(255,255,255,.35)) drop-shadow(0 -1px 0 rgba(80,55,20,.25))">Sofía</span></p>
+            <p class="mt-3 italic text-oliva/90">Así se verá: <span id="vista-nombre" class="font-serif text-2xl tracking-wide" style="background:linear-gradient(120deg,#8C6A2C 0%,#E9D08C 35%,#B08E45 50%,#F3DFA2 65%,#8F6E2E 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 rgba(255,255,255,.35)) drop-shadow(0 -1px 0 rgba(80,55,20,.25))">Sofía</span></p>
           </div>
         </div>
 
         <button id="anadir-carrito" type="button" class="block w-full text-center mt-8 bg-oliva text-crema font-sc tracking-[0.2em] py-4 hover:bg-rosa transition">Añadir al carrito</button>
-        <p class="mt-3 text-center text-sm italic text-oliva/60">Pintada y forrada a mano en Madrid · entrega en 2–4 semanas</p>
+        <p class="mt-3 text-center text-sm italic text-oliva/90">Pintada y forrada a mano en Madrid · entrega en 2–4 semanas</p>
 
         <!-- Detalles (acordeón) -->
         <div class="mt-10 border-t border-oliva/20">
           <div class="detalle border-b border-oliva/20">
             <button type="button" aria-expanded="false" class="titulo-detalle w-full flex justify-between py-4 font-sc tracking-wider text-left">Materiales <span>+</span></button>
-            <div class="contenido-detalle pb-4 text-oliva/80" style="display:none">Acuarela original impresa sobre loneta de algodón, forrada a mano y con el título en dorado (hot stamping).</div>
+            <div class="contenido-detalle pb-4 text-oliva/90" style="display:none">Acuarela original impresa sobre loneta de algodón, forrada a mano y con el título en dorado (hot stamping).</div>
           </div>
           <div class="detalle border-b border-oliva/20">
             <button type="button" aria-expanded="false" class="titulo-detalle w-full flex justify-between py-4 font-sc tracking-wider text-left">Plazos y envío <span>+</span></button>
-            <div class="contenido-detalle pb-4 text-oliva/80" style="display:none">Cada Biblia se hace por encargo y tarda entre 2 y 4 semanas. Envíos a toda España; recogida en el taller con cita previa.</div>
+            <div class="contenido-detalle pb-4 text-oliva/90" style="display:none">Cada Biblia se hace por encargo y tarda entre 2 y 4 semanas. Envíos a toda España; recogida en el taller con cita previa.</div>
           </div>
           <div class="detalle border-b border-oliva/20">
             <button type="button" aria-expanded="false" class="titulo-detalle w-full flex justify-between py-4 font-sc tracking-wider text-left">Cuidados <span>+</span></button>
-            <div class="contenido-detalle pb-4 text-oliva/80" style="display:none">Limpiar con un paño seco. Evitar el sol directo durante mucho tiempo para que la acuarela conserve sus colores.</div>
+            <div class="contenido-detalle pb-4 text-oliva/90" style="display:none">Limpiar con un paño seco. Evitar el sol directo durante mucho tiempo para que la acuarela conserve sus colores.</div>
           </div>
         </div>
       </div>
@@ -197,17 +197,17 @@
       <a href="biblia-sweeter-than-honey.html" class="group">
         <img src="img/jardin-frente.webp" alt="Biblia Sweeter than Honey" class="w-full aspect-[5/7] object-cover">
         <p class="text-2xl mt-3 group-hover:text-rosa">Sweeter than Honey</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">89 €</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">89 €</p>
       </a>
       <a href="biblia-lilies-of-the-field.html" class="group">
         <img src="img/campo-frente.webp" alt="Biblia Lilies of the Field" class="w-full aspect-[5/7] object-cover">
         <p class="text-2xl mt-3 group-hover:text-rosa">Lilies of the Field</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">89 €</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">89 €</p>
       </a>
       <a href="biblia-above-the-waters.html" class="group">
         <img src="img/mar-frente.webp" alt="Biblia Above the Waters" class="w-full aspect-[5/7] object-cover">
         <p class="text-2xl mt-3 group-hover:text-rosa">Above the Waters</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">89 €</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">89 €</p>
       </a>
       </div>
     </section>

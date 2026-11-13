@@ -25,7 +25,7 @@ $(function () {
         $('<li class="flex items-baseline gap-3 py-2 border-b border-oliva/15">').append(
           $('<span class="flex-1">').text(item.nombre + (item.dorado ? ' · «' + item.dorado + '» en dorado' : '')),
           $('<span class="whitespace-nowrap">').text(item.precio + ' €'),
-          $('<button type="button" class="quitar text-xl leading-none p-2 -m-2 text-oliva/50 hover:text-rosa">×</button>').attr({ 'data-i': i, 'aria-label': 'Quitar ' + item.nombre })
+          $('<button type="button" class="quitar text-xl leading-none p-2 -m-2 text-oliva/90 hover:text-rosa">×</button>').attr({ 'data-i': i, 'aria-label': 'Quitar ' + item.nombre })
         )
       );
     });
