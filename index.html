@@ -16,7 +16,7 @@
       --color-crema: #F6F1E3;   /* fondo papel */
       --color-lino:  #ECE3D3;   /* fondo secundario */
       --color-oliva: #4F5A3A;   /* verde del monograma */
-      --color-rosa:  #9C7D72;   /* rosa del sello */
+      --color-rosa:  #7D5F55;   /* rosa del sello (más oscuro para que se lea bien) */
       --color-rubor: #E7D3CA;   /* rosa claro */
       --color-oro:   #B39150;   /* dorado (solo detalles) */
       --font-serif:  "Cormorant Garamond", serif;
@@ -92,7 +92,7 @@
     <!-- Carrito (se abre con jQuery, ver js/carrito.js) -->
     <div id="panel-carrito" class="absolute right-4 md:right-10 top-full mt-px w-[min(22rem,calc(100vw-2rem))] bg-crema border border-oliva/20 shadow-lg p-6 z-50" style="display:none">
       <p class="font-sc tracking-[0.2em] text-sm text-rosa mb-3">Tu carrito</p>
-      <p id="carrito-vacio" class="italic text-oliva/70">Todavía no has añadido ninguna Biblia.</p>
+      <p id="carrito-vacio" class="italic text-oliva/90">Todavía no has añadido ninguna Biblia.</p>
       <div id="carrito-lleno" style="display:none">
         <ul id="lista-carrito"></ul>
         <label class="flex items-center gap-3 mt-4 text-sm cursor-pointer">
@@ -101,7 +101,7 @@
         </label>
         <p class="flex justify-between mt-3 text-xl"><span>Total</span><span id="total-carrito">0 €</span></p>
         <a id="finalizar-encargo" href="mailto:" class="block text-center mt-5 bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-3 hover:bg-rosa transition">Finalizar encargo</a>
-        <button id="vaciar-carrito" type="button" class="block mx-auto mt-3 text-sm italic text-oliva/60 hover:text-rosa">vaciar carrito</button>
+        <button id="vaciar-carrito" type="button" class="block mx-auto mt-3 text-sm italic text-oliva/90 hover:text-rosa">vaciar carrito</button>
       </div>
     </div>
   </header>
@@ -178,11 +178,11 @@
 
         <label for="dedicatoria-texto" class="block font-sc tracking-widest text-sm mt-10 mb-2">Pruébala aquí</label>
         <textarea id="dedicatoria-texto" rows="3" maxlength="120" placeholder="Para mamá, con todo mi amor."
-                  class="w-full max-w-sm bg-transparent border border-oliva/40 p-3 text-lg italic resize-none placeholder:text-oliva/40 focus:outline-none focus:border-rosa"></textarea>
+                  class="w-full max-w-sm bg-transparent border border-oliva/70 p-3 text-lg italic resize-none placeholder:text-oliva/90 focus:outline-none focus:border-rosa"></textarea>
 
         <label for="dedicatoria-firma" class="block font-sc tracking-widest text-sm mt-6 mb-2">De parte de</label>
         <input id="dedicatoria-firma" type="text" maxlength="30" placeholder="Lucía" autocomplete="off"
-               class="w-full max-w-xs bg-transparent border-b border-oliva text-center lg:text-left text-xl italic py-2 placeholder:text-oliva/40 focus:outline-none focus:border-rosa">
+               class="w-full max-w-xs bg-transparent border-b border-oliva text-center lg:text-left text-xl italic py-2 placeholder:text-oliva/90 focus:outline-none focus:border-rosa">
 
         <a href="#coleccion" class="block w-fit mx-auto lg:mx-0 mt-10 font-sc tracking-[0.2em] text-sm border-b border-oliva pb-1 hover:text-rosa hover:border-rosa">encargar la mía</a>
       </div>
@@ -204,7 +204,7 @@
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
       <div>
         <h2 class="text-5xl">Recién pintadas</h2>
-        <p class="mt-2 italic text-oliva/70">Cada Biblia lleva un versículo propio en la contraportada.</p>
+        <p class="mt-2 italic text-oliva/90">Cada Biblia lleva un versículo propio en la contraportada.</p>
       </div>
     </div>
 
@@ -215,7 +215,7 @@
           <img src="img/ramas-trasera.webp" alt="The Vine, contraportada con Isaías 40:8" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
         </div>
         <p class="text-2xl mt-3 group-hover:text-rosa">The Vine</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">Ramas en acuarela · Isaías 40:8</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">Ramas en acuarela · Isaías 40:8</p>
         <p class="mt-1">89 €</p>
       </a>
       <a href="biblia-sweeter-than-honey.html" class="group">
@@ -224,7 +224,7 @@
           <img src="img/jardin-trasera.webp" alt="Sweeter than Honey, contraportada con Salmo 119:103" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
         </div>
         <p class="text-2xl mt-3 group-hover:text-rosa">Sweeter than Honey</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">Jardín de miel · Salmo 119:103</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">Jardín de miel · Salmo 119:103</p>
         <p class="mt-1">89 €</p>
       </a>
       <a href="biblia-lilies-of-the-field.html" class="group">
@@ -233,7 +233,7 @@
           <img src="img/campo-trasera.webp" alt="Lilies of the Field, contraportada con Salmo 119:103" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
         </div>
         <p class="text-2xl mt-3 group-hover:text-rosa">Lilies of the Field</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">Campo de flores · Salmo 119:103</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">Campo de flores · Salmo 119:103</p>
         <p class="mt-1">89 €</p>
       </a>
       <a href="biblia-above-the-waters.html" class="group">
@@ -242,7 +242,7 @@
           <img src="img/mar-trasera.webp" alt="Above the Waters, contraportada con Deuteronomio 7:9" class="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 group-hover:opacity-100">
         </div>
         <p class="text-2xl mt-3 group-hover:text-rosa">Above the Waters</p>
-        <p class="font-sc text-sm tracking-wider text-oliva/60">Sobre las aguas · Deuteronomio 7:9</p>
+        <p class="font-sc text-sm tracking-wider text-oliva/90">Sobre las aguas · Deuteronomio 7:9</p>
         <p class="mt-1">89 €</p>
       </a>
     </div>
@@ -257,20 +257,20 @@
         <h2 class="text-5xl flex items-end gap-4">Ofertas de noviembre
           <img src="img/angel.webp" alt="" aria-hidden="true" class="dibujo angel-vuela w-14 md:w-20 -mb-2"></h2>
       </div>
-      <p class="max-w-sm text-oliva/70 italic">Pequeños detalles para estrenar el taller. Válidas hasta el 30 de noviembre o hasta agotar telas.</p>
+      <p class="max-w-sm text-oliva/90 italic">Pequeños detalles para estrenar el taller. Válidas hasta el 30 de noviembre o hasta agotar telas.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <article data-aos="fade-up" data-aos-delay="0" class="tarjeta-oferta bg-crema p-6 md:p-8 flex flex-col gap-4 focus-within:outline-none">
         <p class="font-sc tracking-[0.2em] text-xs text-rosa">Bautizos</p>
         <h3 class="text-3xl leading-tight">Su nombre en dorado, de regalo</h3>
-        <p class="text-oliva/75 flex-1">En cualquier Biblia de la colección para un bautizo: grabamos el nombre del bebé sin coste. Marca «Es para un bautizo» al personalizarla.</p>
+        <p class="text-oliva/90 flex-1">En cualquier Biblia de la colección para un bautizo: grabamos el nombre del bebé sin coste. Marca «Es para un bautizo» al personalizarla.</p>
         <span class="etiqueta-precio self-start"><s>104 €</s> 89 €</span>
         <a href="#coleccion" class="font-sc tracking-[0.2em] text-sm underline underline-offset-4 decoration-oliva/30 hover:text-rosa hover:decoration-rosa focus-visible:text-rosa">Pedir la mía →</a>
       </article>
       <article data-aos="fade-up" data-aos-delay="120" class="tarjeta-oferta bg-crema p-6 md:p-8 flex flex-col gap-4">
         <p class="font-sc tracking-[0.2em] text-xs text-rosa">Bodas</p>
         <h3 class="text-3xl leading-tight">Pack de dos Biblias</h3>
-        <p class="text-oliva/75 flex-1">Una para cada uno, con las iniciales de los dos y la fecha del sí en el lomo.</p>
+        <p class="text-oliva/90 flex-1">Una para cada uno, con las iniciales de los dos y la fecha del sí en el lomo.</p>
         <span class="etiqueta-precio self-start"><s>178 €</s> 160 €</span>
         <button type="button" class="anadir-oferta self-start font-sc tracking-[0.2em] text-sm underline underline-offset-4 decoration-oliva/30 hover:text-rosa hover:decoration-rosa focus-visible:text-rosa" data-nombre="Pack de dos Biblias (bodas)" data-precio="160">Añadir el pack al carrito →</button>
       </article>
@@ -296,27 +296,27 @@
     <ol class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       <li>
         <img src="img/taller-acuarela.webp" alt="Manos de la artista con un pincel en el estudio" class="w-full aspect-square object-cover" loading="lazy">
-        <p class="font-sc text-sm text-oliva/60 mt-4">Nº 01</p>
+        <p class="font-sc text-sm text-oliva/90 mt-4">Nº 01</p>
         <p class="text-2xl">Acuarela</p>
-        <p class="text-oliva/75 mt-1">Cada diseño se pinta a mano en el estudio.</p>
+        <p class="text-oliva/90 mt-1">Cada diseño se pinta a mano en el estudio.</p>
       </li>
       <li>
         <img src="img/taller-impresion.webp" alt="Telas y papeles colgados en el taller" class="w-full aspect-square object-cover" loading="lazy">
-        <p class="font-sc text-sm text-oliva/60 mt-4">Nº 02</p>
+        <p class="font-sc text-sm text-oliva/90 mt-4">Nº 02</p>
         <p class="text-2xl">Impresión en tela</p>
-        <p class="text-oliva/75 mt-1">Sobre loneta de algodón, en una imprenta del barrio de Salamanca.</p>
+        <p class="text-oliva/90 mt-1">Sobre loneta de algodón, en una imprenta del barrio de Salamanca.</p>
       </li>
       <li>
         <img src="img/taller-forrado.webp" alt="Manos forrando la tapa con plegadera y papel" class="w-full aspect-square object-cover" loading="lazy">
-        <p class="font-sc text-sm text-oliva/60 mt-4">Nº 03</p>
+        <p class="font-sc text-sm text-oliva/90 mt-4">Nº 03</p>
         <p class="text-2xl">Forrado</p>
-        <p class="text-oliva/75 mt-1">La tela se ajusta y se forra a mano, pieza a pieza.</p>
+        <p class="text-oliva/90 mt-1">La tela se ajusta y se forra a mano, pieza a pieza.</p>
       </li>
       <li>
         <img src="img/taller-dorado.webp" alt="Detalle del dorado «Santa Biblia» sobre la tapa de lino" class="w-full aspect-square object-cover" loading="lazy">
-        <p class="font-sc text-sm text-oliva/60 mt-4">Nº 04</p>
+        <p class="font-sc text-sm text-oliva/90 mt-4">Nº 04</p>
         <p class="text-2xl">Dorado</p>
-        <p class="text-oliva/75 mt-1">Hot stamping en un taller artesanal de Madrid.</p>
+        <p class="text-oliva/90 mt-1">Hot stamping en un taller artesanal de Madrid.</p>
       </li>
     </ol>
   </section>
@@ -330,7 +330,7 @@
       </div>
       <div class="md:col-span-9">
         <h2 class="text-4xl md:text-6xl leading-tight">Aprende a pintar con nosotras, <em>los sábados en Lagasca.</em></h2>
-        <p class="mt-4 max-w-xl text-oliva/75">Grupos de ocho personas como máximo. El material está incluido, y siempre hay café y algo dulce.</p>
+        <p class="mt-4 max-w-xl text-oliva/90">Grupos de ocho personas como máximo. El material está incluido, y siempre hay café y algo dulce.</p>
       </div>
     </div>
 
@@ -338,11 +338,11 @@
       <article class="taller bg-crema p-6 md:p-8 flex flex-col gap-4" data-taller="acuarela">
         <p class="font-sc tracking-[0.2em] text-xs text-rosa">Iniciación</p>
         <h3 class="text-3xl leading-tight">Acuarela botánica</h3>
-        <p class="text-oliva/75 flex-1">Hojas, ramas y flores como las de nuestras tapas. Para quien nunca ha cogido un pincel.</p>
+        <p class="text-oliva/90 flex-1">Hojas, ramas y flores como las de nuestras tapas. Para quien nunca ha cogido un pincel.</p>
         <dl class="text-sm border-t border-oliva/15 pt-3 space-y-1">
-          <div class="flex justify-between"><dt class="text-oliva/60">Cuándo</dt><dd>Sábados · 10:30</dd></div>
-          <div class="flex justify-between"><dt class="text-oliva/60">Duración</dt><dd>2 h 30</dd></div>
-          <div class="flex justify-between"><dt class="text-oliva/60">Precio</dt><dd>35 €</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/90">Cuándo</dt><dd>Sábados · 10:30</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/90">Duración</dt><dd>2 h 30</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/90">Precio</dt><dd>35 €</dd></div>
         </dl>
         <p class="plazas font-sc tracking-wider text-sm text-rosa">Quedan <span class="plazas-num">3</span> plazas</p>
         <button type="button" class="btn-reservar bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-3 hover:bg-rosa transition">Reservar plaza</button>
@@ -351,11 +351,11 @@
       <article class="taller bg-crema p-6 md:p-8 flex flex-col gap-4" data-taller="letra">
         <p class="font-sc tracking-[0.2em] text-xs text-rosa">Caligrafía</p>
         <h3 class="text-3xl leading-tight">Letra a mano para tu dedicatoria</h3>
-        <p class="text-oliva/75 flex-1">Practica una letra bonita y fácil para escribir la página de la dedicatoria de tu Biblia.</p>
+        <p class="text-oliva/90 flex-1">Practica una letra bonita y fácil para escribir la página de la dedicatoria de tu Biblia.</p>
         <dl class="text-sm border-t border-oliva/15 pt-3 space-y-1">
-          <div class="flex justify-between"><dt class="text-oliva/60">Cuándo</dt><dd>Sábados · 17:00</dd></div>
-          <div class="flex justify-between"><dt class="text-oliva/60">Duración</dt><dd>2 h</dd></div>
-          <div class="flex justify-between"><dt class="text-oliva/60">Precio</dt><dd>30 €</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/90">Cuándo</dt><dd>Sábados · 17:00</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/90">Duración</dt><dd>2 h</dd></div>
+          <div class="flex justify-between"><dt class="text-oliva/90">Precio</dt><dd>30 €</dd></div>
         </dl>
         <p class="plazas font-sc tracking-wider text-sm text-rosa">Quedan <span class="plazas-num">5</span> plazas</p>
         <button type="button" class="btn-reservar bg-oliva text-crema font-sc tracking-[0.2em] text-sm py-3 hover:bg-rosa transition">Reservar plaza</button>
@@ -366,9 +366,9 @@
         <h3 class="text-3xl leading-tight">Pinta la tapa de tu Biblia</h3>
         <p class="opacity-80 flex-1">Diseñas y pintas tu propia tapa; nosotras la imprimimos, la forramos y te la entregamos terminada.</p>
         <dl class="text-sm border-t border-crema/20 pt-3 space-y-1">
-          <div class="flex justify-between"><dt class="opacity-60">Cuándo</dt><dd>Dos sábados · 10:30</dd></div>
-          <div class="flex justify-between"><dt class="opacity-60">Incluye</dt><dd>La Biblia terminada</dd></div>
-          <div class="flex justify-between"><dt class="opacity-60">Precio</dt><dd>120 €</dd></div>
+          <div class="flex justify-between"><dt class="opacity-80">Cuándo</dt><dd>Dos sábados · 10:30</dd></div>
+          <div class="flex justify-between"><dt class="opacity-80">Incluye</dt><dd>La Biblia terminada</dd></div>
+          <div class="flex justify-between"><dt class="opacity-80">Precio</dt><dd>120 €</dd></div>
         </dl>
         <p class="plazas font-sc tracking-wider text-sm text-rubor">Quedan <span class="plazas-num">2</span> plazas</p>
         <button type="button" class="btn-reservar bg-crema text-oliva font-sc tracking-[0.2em] text-sm py-3 hover:bg-rubor transition">Reservar plaza</button>
@@ -380,23 +380,23 @@
       <h3 class="font-sc tracking-[0.25em] text-xl text-center mb-8">Reserva tu plaza</h3>
       <form id="form-taller" novalidate class="grid sm:grid-cols-2 gap-x-6 gap-y-5">
         <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Taller
-          <select id="taller-select" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+          <select id="taller-select" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/70 py-2 outline-none focus:border-oliva">
             <option value="acuarela">Acuarela botánica · 35 €</option>
             <option value="letra">Letra a mano · 30 €</option>
             <option value="tapa">Pinta la tapa de tu Biblia · 120 €</option>
           </select>
         </label>
         <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Fecha
-          <select id="taller-fecha" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva"></select>
+          <select id="taller-fecha" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/70 py-2 outline-none focus:border-oliva"></select>
         </label>
         <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Nombre
-          <input id="taller-nombre" type="text" autocomplete="name" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+          <input id="taller-nombre" type="text" autocomplete="name" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/70 py-2 outline-none focus:border-oliva">
         </label>
         <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Email
-          <input id="taller-email" type="email" autocomplete="email" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+          <input id="taller-email" type="email" autocomplete="email" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/70 py-2 outline-none focus:border-oliva">
         </label>
         <label class="flex flex-col gap-1 font-sc text-sm tracking-wider">Personas
-          <input id="taller-personas" type="number" min="1" max="4" value="1" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/60 py-2 outline-none focus:border-oliva">
+          <input id="taller-personas" type="number" min="1" max="4" value="1" class="font-serif text-lg tracking-normal bg-transparent border-b border-oliva/70 py-2 outline-none focus:border-oliva">
         </label>
         <p class="self-end text-2xl sm:text-right">Total: <span id="taller-total">35</span> €</p>
         <p id="taller-error" class="sm:col-span-2 italic text-rosa min-h-6" aria-live="polite"></p>
@@ -405,7 +405,7 @@
       <div id="taller-ok" class="text-center border border-oliva/30 p-8" style="display:none" aria-live="polite">
         <p class="font-sc tracking-[0.2em] text-sm text-rosa mb-2">¡Plaza reservada!</p>
         <p id="taller-resumen" class="text-2xl"></p>
-        <p class="mt-2 italic text-oliva/70">Te escribimos al email con los detalles. Te esperamos en Lagasca, 61.</p>
+        <p class="mt-2 italic text-oliva/90">Te escribimos al email con los detalles. Te esperamos en Lagasca, 61.</p>
         <button type="button" id="taller-otra" class="mt-6 font-sc tracking-[0.2em] text-sm border-b border-oliva pb-1 hover:text-rosa">hacer otra reserva</button>
       </div>
     </div>
@@ -419,7 +419,7 @@
     <div class="md:order-1">
       <p class="font-sc tracking-[0.2em] text-sm text-rosa">Horario y ubicación</p>
       <h2 class="text-5xl mb-4">Nuestra tienda</h2>
-      <p class="text-oliva/80 mb-8 max-w-md">
+      <p class="text-oliva/90 mb-8 max-w-md">
         Una fachada rosa en el barrio de Salamanca. Ven a tocar las telas, ver las acuarelas
         y elegir tu diseño con nosotras. Siempre hay café, y alguna abeja.
       </p>
@@ -427,10 +427,10 @@
         <span class="punto-estado" aria-hidden="true"></span><span class="texto-estado">Consultando horario…</span>
       </p>
       <dl class="divide-y divide-oliva/15 border-y border-oliva/15 mb-8">
-        <div class="dia flex justify-between py-3" data-dias="1"><dt>Lunes</dt><dd class="text-oliva/60 italic">Cerrado</dd></div>
+        <div class="dia flex justify-between py-3" data-dias="1"><dt>Lunes</dt><dd class="text-oliva/90 italic">Cerrado</dd></div>
         <div class="dia flex justify-between py-3" data-dias="2,3,4,5"><dt>Martes – Viernes</dt><dd>10:00 – 14:00 · 17:00 – 20:00</dd></div>
         <div class="dia flex justify-between py-3" data-dias="6"><dt>Sábado</dt><dd>10:00 – 14:00</dd></div>
-        <div class="dia flex justify-between py-3" data-dias="0"><dt>Domingo</dt><dd class="text-oliva/60 italic">Cerrado</dd></div>
+        <div class="dia flex justify-between py-3" data-dias="0"><dt>Domingo</dt><dd class="text-oliva/90 italic">Cerrado</dd></div>
       </dl>
       <address class="not-italic mb-8">
         <span class="font-sc tracking-[0.2em] text-sm text-rosa block mb-1">Dónde estamos</span>
@@ -459,13 +459,13 @@
     <div class="my-4">
       <img src="img/ornamento.webp" alt="" class="dibujo w-44 md:w-56 mx-auto">
     </div>
-    <p class="text-oliva/80 max-w-lg mx-auto">
+    <p class="text-oliva/90 max-w-lg mx-auto">
       Una vez al mes: nuevos diseños, el proceso desde dentro y, a veces, un versículo
       que no nos podemos quitar de la cabeza. <em>Y un 10% en tu primer encargo.</em>
     </p>
     <form class="mt-10 max-w-xl mx-auto flex flex-col sm:flex-row items-stretch sm:items-end gap-5 sm:gap-6" onsubmit="event.preventDefault(); this.innerHTML='<p class=&quot;py-3 italic mx-auto&quot;>¡Ya estás en la lista!</p>'">
       <label for="email-carta" class="sr-only">Tu email</label>
-      <input id="email-carta" type="email" required placeholder="Tu email" class="flex-1 bg-transparent border-b border-oliva/60 py-2 text-lg outline-none placeholder:text-oliva/50 focus:border-oliva">
+      <input id="email-carta" type="email" required placeholder="Tu email" class="flex-1 bg-transparent border-b border-oliva/70 py-2 text-lg outline-none placeholder:text-oliva/90 focus:border-oliva">
       <button type="submit" class="bg-oliva text-crema font-sc tracking-[0.2em] text-sm px-7 py-3 hover:bg-rosa transition">suscribirse</button>
     </form>
   </section>

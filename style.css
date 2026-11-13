@@ -55,7 +55,7 @@
     width: 6px; height: 6px; margin-top: -3px; border-radius: 50%;
     background: var(--color-crema);
   }
-  .etiqueta-precio s { opacity: .55; font-size: .85em; }
+  .etiqueta-precio s { opacity: .8; font-size: .85em; }
 
   /* Tarjeta de oferta*/
   .tarjeta-oferta { position: relative; }
@@ -81,7 +81,7 @@
   .libro img { filter: drop-shadow(0 18px 28px rgba(43, 36, 28, .22)); }
 
   /* Carrusel de la colección (Swiper): puntos con los colores de la marca, debajo de las Biblias */
-  .coleccion-swiper { --swiper-theme-color: var(--color-oliva); --swiper-pagination-bullet-inactive-color: var(--color-oliva); }
+  .coleccion-swiper { --swiper-theme-color: var(--color-oliva); --swiper-pagination-bullet-inactive-color: var(--color-oliva); --swiper-pagination-bullet-inactive-opacity: .45; }
 
   /* Indicador "abierto / cerrado" del horario */
   .punto-estado { width: .6rem; height: .6rem; border-radius: 50%; display: inline-block; background: var(--color-rosa); }
